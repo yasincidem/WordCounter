@@ -17,8 +17,9 @@ public class WordCounter {
 
         try {
             list = Files.readAllLines(path);
+           
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.print("No file found. You need to create a text file named text.txt");
         }
 
         Integer rowCounter = 1;
@@ -51,7 +52,7 @@ public class WordCounter {
         scan.close();
         ArrayList<Integer> lines = tokens.get(word.toLowerCase());
         if (lines != null) {
-            System.out.println("Kelime var. Ayrýca þu satýrlarda geçiyor: ");
+            System.out.println("The word exists. It passes in these row: ");
             for (Integer i : lines)
                 System.out.print(i + "   ");
             System.out.println("\n It passes" + tokenCounter.get(word.toLowerCase())
