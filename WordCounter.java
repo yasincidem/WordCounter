@@ -19,7 +19,7 @@ public class WordCounter {
             list = Files.readAllLines(path);
            
         } catch (IOException e) {
-            System.err.print("No file found. You need to create a text file named text.txt");
+            System.err.print("No file found. You need to create a text file named text.txt outside of src folder");
         }
 
         Integer rowCounter = 1;
